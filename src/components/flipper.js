@@ -3,7 +3,11 @@ import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 const Flipper = ({ isFlipped, FrontCard, BackCard }) => {
 	return (
-		<Flippy isFlipped={isFlipped} style={{ height: "100%" }}>
+		<Flippy
+			isFlipped={isFlipped}
+			flipOnClick={false}
+			style={{ height: "100%" }}
+		>
 			<FrontSide style={{ padding: 0, boxShadow: "none" }}>
 				<FrontCard />
 			</FrontSide>

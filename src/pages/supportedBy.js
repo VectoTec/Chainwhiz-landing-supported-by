@@ -92,12 +92,16 @@ const SupportedBy = () => {
 								>
 									<Grid item xs={10} md={5}>
 										<span
-											onMouseEnter={async () =>
-												await setFlip2(!flip2)
-											}
-											onMouseLeave={async () =>
-												await setFlip2(!flip2)
-											}
+											onMouseEnter={async () => {
+												if (!flip2)
+													await setFlip2(true);
+												await setFlip1(false);
+											}}
+											onMouseLeave={async () => {
+												if (flip2)
+													await setFlip2(false);
+												await setFlip1(false);
+											}}
 										>
 											<Flipper
 												isFlipped={flip1}
@@ -108,12 +112,16 @@ const SupportedBy = () => {
 									</Grid>
 									<Grid item xs={10} md={5}>
 										<span
-											onMouseEnter={async () =>
-												await setFlip1(!flip1)
-											}
-											onMouseLeave={async () =>
-												await setFlip1(!flip1)
-											}
+											onMouseEnter={async () => {
+												if (!flip1)
+													await setFlip1(true);
+												await setFlip2(false);
+											}}
+											onMouseLeave={async () => {
+												if (flip1)
+													await setFlip1(false);
+												await setFlip2(false);
+											}}
 										>
 											<Flipper
 												isFlipped={flip2}
