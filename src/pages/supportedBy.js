@@ -54,26 +54,22 @@ const SupportedBy = () => {
 		});
 
 	return (
-		<React.Fragment>
-			<CssBaseline />
-			<Box sx={{ height: "100vh", backgroundColor: "#000" }}>
-				<Container maxWidth="lg">
+		// <React.Fragment>
+		// 	<CssBaseline />
+			<Box sx={{minHeight :"100vh" , backgroundColor: "#000"}}>
+				<Container maxWidth="xl">
 					<Grid
 						container
-						direction="column"
-						justifyContent="space-between"
+						justifyContent="center"
 						alignItems="center"
-						sx={{
-							height: "100vh",
-						}}
 					>
-						<Grid item>
-							<Box mt={10}>
+						<Grid item pt={6}>
+							<Box>
 								<Typography
 									variant="h3"
 									gutterBottom
 									color="common.white"
-									sx={{ fontWeight: 700 }}
+									sx={{ fontWeight: 700 , textAlign : "center" , fontFamily : "Poppins"}}
 								>
 									Our Biggest{" "}
 									<span style={{ color: "#D6FE2E" }}>
@@ -87,10 +83,10 @@ const SupportedBy = () => {
 								<Grid
 									container
 									direction="row"
-									justifyContent="space-between"
+									justifyContent="space-around"
 									alignItems="center"
 								>
-									<Grid item xs={10} md={5}>
+									<Grid item xs={10} md={5} p={1} mb={1}>
 										<span
 											onMouseEnter={async () => {
 												if (!flip2)
@@ -110,7 +106,7 @@ const SupportedBy = () => {
 											/>
 										</span>
 									</Grid>
-									<Grid item xs={10} md={5}>
+									<Grid item xs={10} md={5} p={1} mt={1}>
 										<span
 											onMouseEnter={async () => {
 												if (!flip1)
@@ -133,17 +129,17 @@ const SupportedBy = () => {
 								</Grid>
 							</Box>
 						</Grid>
-						<Grid item>
-							<Box mb={10}>
+						<Grid item pb={2}>
+							<Box>
 								<CustomButton
 									variant="outlined"
 									href="https://medium.com/articles-more-every-week/chainwhiz-smashes-the-benchmarks-of-project-building-with-a-grant-from-near-protocol-42322e39d005"
 									target="_blank"
 									onMouseEnter={async () =>
-										await setHover(!hover)
+										await setHover(true)
 									}
 									onMouseLeave={async () =>
-										await setHover(!hover)
+										await setHover(false)
 									}
 								>
 									<Typography
@@ -152,7 +148,7 @@ const SupportedBy = () => {
 										ml={1.5}
 										mr={1.5}
 										color="#D6FE2E"
-										sx={{ fontWeight: 700 }}
+										sx={{ fontWeight: 700 , fontFamily : "Poppins"}}
 									>
 										Read Articles{" "}
 										{!hover && (
@@ -178,7 +174,7 @@ const SupportedBy = () => {
 					</Grid>
 				</Container>
 			</Box>
-		</React.Fragment>
+		// </React.Fragment>
 	);
 };
 export default SupportedBy;

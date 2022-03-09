@@ -11,7 +11,7 @@ const BackCard = ({ title, body }) => {
 				borderShadow: "none",
 				boxShadow: "none",
 				backgroundColor: "#232323",
-				height: "330px",
+				minHeight: "310px",
 			}}
 		>
 			<CardActionArea>
@@ -24,6 +24,7 @@ const BackCard = ({ title, body }) => {
 							fontWeight: 500,
 							fontSize: "21px",
 							lineHeight: "40px",
+							fontFamily : "Poppins"
 						}}
 					>
 						{title}

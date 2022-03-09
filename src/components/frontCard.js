@@ -12,7 +12,7 @@ const FrontCard = ({ image, body, alt }) => {
 				borderShadow: "none",
 				boxShadow: "none",
 				background: "#000",
-				height: "330px",
+				minHeight: "310px",
 			}}
 		>
 			<CardActionArea>
@@ -30,6 +30,7 @@ const FrontCard = ({ image, body, alt }) => {
 							textAlign: "center",
 							fontSize: "21px",
 							lineHeight: "34px",
+							fontFamily : "Poppins"
 						}}
 					>
 						{body}
